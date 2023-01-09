@@ -1,0 +1,18 @@
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  width: 300px;
+}
+
+.quality-selector {
+  width: 100%;
+}
+
+.popup-footer {
+  text-align: end;
+  font-size: small;
+  font-weight: bold;
+  color: red;
+}

@@ -1,9 +1,13 @@
-chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-  if (msg.color) {
-    console.log("Receive color = " + msg.color);
-    document.body.style.backgroundColor = msg.color;
-    sendResponse("Change color to " + msg.color);
-  } else {
-    sendResponse("Color message is none.");
+
+import replaceRedditPlayers from './core'
+
+function handleOnCompleted() {
+  const url = window.location.href
+  const isReddit = url.includes('reddit.com')
+  if (isReddit) {
+    replaceRedditPlayers()
+    setInterval(replaceRedditPlayers, 500)
   }
-});
+}
+
+window.onload = handleOnCompleted
