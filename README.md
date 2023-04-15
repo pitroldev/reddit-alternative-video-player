@@ -1,15 +1,15 @@
 <div align="center">
-<img src="./resources/web_hi_res_512.png" width="150" alt="Logo of Reddit Video Player Chrome Extension" />
-<h1>Reddit Video Player Chrome Extension</h1> 
+<img src="./assets/logo.jpg" width="150" alt="Logo of Reddit Video Player Chrome Extension" />
+<h1>Reddit Video Player Chrome Extension</h1>
 <a href="https://github.com/user/repo/releases">
 <img src="https://img.shields.io/badge/version-1.0.2-blue.svg" alt="Current version of the Reddit Video Player Chrome Extension." />
 </a>
 <a href="https://github.com/user/repo/blob/main/LICENSE">
-<img src="https://img.shields.io/badge/license-MIT-green.svg" alt="Reddit Video Player Chrome Extension is released under the MIT license." /> 
+<img src="https://img.shields.io/badge/license-MIT-green.svg" alt="Reddit Video Player Chrome Extension is released under the MIT license." />
 </a>
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="Pull Requests are welcome!" />
 <br/>
-<br/> 
+<br/>
 </div>
 
 ## 📃 Description
@@ -42,4 +42,4 @@ If you'd like to contribute to the development of this extension, please feel fr
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
