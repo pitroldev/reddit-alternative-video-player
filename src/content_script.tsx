@@ -1,4 +1,3 @@
-
 import replaceRedditPlayers from './core'
 
 function handleOnCompleted() {

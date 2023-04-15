@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from 'react'
+
+import {
+  MAX_QUALITY,
+  MIN_QUALITY,
+  QUALITY_STEP,
+  SUGGESTED_AUTO,
+  SUGGESTED_QUALITY,
+} from '../constants'
+
 import './Popup.css'
-
-const MIN_QUALITY = 0
-const MAX_QUALITY = 9
-const QUALITY_STEP = 1
-
-const SUGGESTED_QUALITY = MAX_QUALITY
-const SUGGESTED_AUTO = false
 
 const Popup = () => {
   const [quality, setQuality] = useState<number>(SUGGESTED_QUALITY)
-  const [isAutoQualityOn, setIsAutoQualityOn] = useState<boolean>(SUGGESTED_AUTO)
+  const [isAutoQualityOn, setIsAutoQualityOn] =
+    useState<boolean>(SUGGESTED_AUTO)
 
   useEffect(() => {
     chrome.storage.sync.get(['quality', 'isAutoQualityOn'], function (result) {
       setQuality(result.quality ?? SUGGESTED_QUALITY)
       setIsAutoQualityOn(result.isAutoQualityOn ?? SUGGESTED_AUTO)
     })
-
-
   }, [])
 
   const handleQualityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,14 +44,14 @@ const Popup = () => {
   return (
     <div className="popup-container">
       <h3>Reddit Alternative Video Player Settings</h3>
-      <label className='auto-quality-label'>
+      <label className="auto-quality-label">
         <input
           className="auto-quality-selector"
           type="checkbox"
           checked={isAutoQualityOn}
           onChange={handleAutoQualityChange}
-          />
-          <span>Auto Quality</span>
+        />
+        <span>Auto Quality</span>
       </label>
       <input
         className="quality-selector"
@@ -70,7 +71,10 @@ const Popup = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Support me on Patreon <span role="img" aria-label="heart">❤️</span>
+          Support me on Patreon{' '}
+          <span role="img" aria-label="heart">
+            ❤️
+          </span>
         </a>
       </div>
     </div>
